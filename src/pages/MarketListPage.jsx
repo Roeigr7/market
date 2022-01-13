@@ -14,11 +14,12 @@ const MarketListPage = () => {
   useEffect(() => {
     const fetchMarketList = () => {
       fetch(
-        'https://yfapi.net/v6/finance/quote/marketSummary?lang=en&region=US',
+        // 'https://yfapi.net/v6/finance/quote/marketSummary?lang=en&region=US',
+        './demoData.json',
         {
           headers: {
             'Content-Type': 'application/json',
-            'X-API-KEY': 'ZeKbpkwZgY3CkuxYHevXL1YH14JSAkev6yA5Tbq7',
+            Accept: 'application/json',
           },
         }
       )
@@ -42,7 +43,12 @@ const MarketListPage = () => {
     setSelectedItem(false);
   };
 
-  if(error) return <Grid container justifyContent="center" pt={5}><Typography variant="h3">{error}</Typography></Grid>
+  if (error)
+    return (
+      <Grid container justifyContent='center' pt={5}>
+        <Typography variant='h3'>{error}</Typography>
+      </Grid>
+    );
 
   return (
     <Grid container justifyContent='center'>
@@ -58,15 +64,21 @@ const MarketListPage = () => {
         px={2}
       >
         {marketList.map((item, idx) => (
-          <Grid container key={idx} item sm={6} lg={3}>
+          <Grid item key={idx} sm={6} md={4} lg={3}>
             <Grid
-              textAlign='center'
               container
-              sx={{ backgroundColor: '#f4f4f4' }}
+              textAlign='center'
+              justifyContent='stretch'
+              alignItems='stretch'
+              sx={{ backgroundColor: '#f4f4f4', width: '100%', height: '100%' }}
             >
               <Grid item py={1} xs={12}>
-                <Typography sx={{fontWeight:'600'}} variant='h5' component='div'>
-                  {item.shortName} 
+                <Typography
+                  sx={{ fontWeight: '600' }}
+                  variant='h5'
+                  component='div'
+                >
+                  {item.shortName}
                 </Typography>
                 <Typography variant='cardBody' component='span'>
                   <span>{item.symbol}</span>
@@ -80,10 +92,13 @@ const MarketListPage = () => {
                   sx={{ borderBottom: '2px solid white' }}
                 >
                   <Typography component={'p'} variant='cardTitle'>
-                  Regular Market change
+                    Market change
                   </Typography>
                   <Typography component={'p'} variant='cardBody'>
-                  <span style={{fontWeight:'800'}}>fmt:</span> {item.regularMarketChange.fmt} <br/> <span style={{fontWeight:'800'}}>raw:</span> {item.regularMarketChange.raw} 
+                    <span style={{ fontWeight: '800' }}>fmt:</span>{' '}
+                    {item.regularMarketChange.fmt} <br />{' '}
+                    <span style={{ fontWeight: '800' }}>raw:</span>{' '}
+                    {item.regularMarketChange.raw}
                   </Typography>
                 </Grid>
               )}
@@ -98,10 +113,13 @@ const MarketListPage = () => {
                   }}
                 >
                   <Typography component={'p'} variant='cardTitle'>
-                  Regular change Percent
+                    Change Percent
                   </Typography>
                   <Typography component={'p'} variant='cardBody'>
-                  <span style={{fontWeight:'800'}}>fmt:</span> {item.regularMarketChangePercent.fmt} <br/><span style={{fontWeight:'800'}}>raw:</span> {item.regularMarketChangePercent.raw} 
+                    <span style={{ fontWeight: '800' }}>fmt:</span>{' '}
+                    {item.regularMarketChangePercent.fmt} <br />
+                    <span style={{ fontWeight: '800' }}>raw:</span>{' '}
+                    {item.regularMarketChangePercent.raw}
                   </Typography>
                 </Grid>
               )}
@@ -113,10 +131,13 @@ const MarketListPage = () => {
                   sx={{ borderBottom: '2px solid white' }}
                 >
                   <Typography component={'p'} variant='cardTitle'>
-                 Regular Market Price
+                    Market Price
                   </Typography>
                   <Typography component={'p'} variant='cardBody'>
-                    <span style={{fontWeight:'800'}}>fmt:</span> {item.regularMarketPrice.fmt} <br/> <span style={{fontWeight:'800'}}>raw:</span> {item.regularMarketPrice.raw} 
+                    <span style={{ fontWeight: '800' }}>fmt:</span>{' '}
+                    {item.regularMarketPrice.fmt} <br />{' '}
+                    <span style={{ fontWeight: '800' }}>raw:</span>{' '}
+                    {item.regularMarketPrice.raw}
                   </Typography>
                 </Grid>
               )}
@@ -131,10 +152,13 @@ const MarketListPage = () => {
                   }}
                 >
                   <Typography component={'p'} variant='cardTitle'>
-                    Regular Previous Close
+                    Previous Close
                   </Typography>
                   <Typography component={'p'} variant='cardBody'>
-                  <span style={{fontWeight:'800'}}>fmt:</span> {item.regularMarketPreviousClose.fmt} <br/><span style={{fontWeight:'800'}}>raw:</span> {item.regularMarketPreviousClose.raw} 
+                    <span style={{ fontWeight: '800' }}>fmt:</span>{' '}
+                    {item.regularMarketPreviousClose.fmt} <br />
+                    <span style={{ fontWeight: '800' }}>raw:</span>{' '}
+                    {item.regularMarketPreviousClose.raw}
                   </Typography>
                 </Grid>
               )}

@@ -1,15 +1,22 @@
-import React,{useContext} from 'react';
+import React, { useContext } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
-import {IconButton,Menu,Box,AppBar,Toolbar,Typography,Tooltip,MenuItem,Button,Avatar,Container} from '@mui/material';
+import {
+  IconButton,
+  Menu,
+  Box,
+  AppBar,
+  Toolbar,
+  Typography,
+  MenuItem,
+  Button,
+  Container,
+} from '@mui/material';
 import { userContext } from '../context/userContext';
-import { Link } from "react-router-dom";
-const pages = ['Login','Market','Logout'];
-
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
-const {user,setUser}=useContext(userContext);
+  const { user, setUser } = useContext(userContext);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -20,17 +27,18 @@ const {user,setUser}=useContext(userContext);
   };
   const handleCloseNavMenuLogout = () => {
     setAnchorElNav(null);
-    setUser(false)
+    localStorage.removeItem('name');
+    setUser(false);
   };
 
   return (
-    <AppBar position="static">
-      <Container maxWidth="xl">
+    <AppBar position='static'>
+      <Container maxWidth='xl'>
         <Toolbar disableGutters>
           <Typography
-            variant="h6"
+            variant='h6'
             noWrap
-            component="div"
+            component='div'
             sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
           >
             AT
@@ -38,17 +46,17 @@ const {user,setUser}=useContext(userContext);
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
+              size='large'
+              aria-label='account of current user'
+              aria-controls='menu-appbar'
+              aria-haspopup='true'
               onClick={handleOpenNavMenu}
-              color="inherit"
+              color='inherit'
             >
               <MenuIcon />
             </IconButton>
             <Menu
-              id="menu-appbar"
+              id='menu-appbar'
               anchorEl={anchorElNav}
               anchorOrigin={{
                 vertical: 'bottom',
@@ -65,81 +73,94 @@ const {user,setUser}=useContext(userContext);
                 display: { xs: 'block', md: 'none' },
               }}
             >
-
-                {!user&&
-                <Link to="/" style={{textDecoration:'none',color:'black'}}>
-                <MenuItem onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">Login</Typography>
-                </MenuItem>
+              {!user && (
+                <Link to='/' style={{ textDecoration: 'none', color: 'black' }}>
+                  <MenuItem onClick={handleCloseNavMenu}>
+                    <Typography textAlign='center'>Login</Typography>
+                  </MenuItem>
                 </Link>
-                }
-                               {user&&
-                <Link to="/market" style={{textDecoration:'none',color:'black'}}>
-                <MenuItem onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">Market</Typography>
-                </MenuItem>
+              )}
+              {user && (
+                <Link
+                  to='/market'
+                  style={{ textDecoration: 'none', color: 'black' }}
+                >
+                  <MenuItem onClick={handleCloseNavMenu}>
+                    <Typography textAlign='center'>Market</Typography>
+                  </MenuItem>
                 </Link>
-                }                   {user&&
-                <Link to="/" style={{textDecoration:'none',color:'black'}}>
-                <MenuItem onClick={handleCloseNavMenuLogout}>
-                  <Typography textAlign="center">Logout</Typography>
-                </MenuItem>
+              )}{' '}
+              {user && (
+                <Link to='/' style={{ textDecoration: 'none', color: 'black' }}>
+                  <MenuItem onClick={handleCloseNavMenuLogout}>
+                    <Typography textAlign='center'>Logout</Typography>
+                  </MenuItem>
                 </Link>
-                }
+              )}
             </Menu>
           </Box>
           <Typography
-            variant="h6"
+            variant='h6'
             noWrap
-            component="div"
+            component='div'
             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
           >
             AT
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            
-             {!user&& 
-             <Link to="/" style={{textDecoration:'none',color:'black'}}>
-             <Button
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                Login
-              </Button>
+            {!user && (
+              <Link to='/' style={{ textDecoration: 'none', color: 'black' }}>
+                <Button
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, color: 'white', display: 'block' }}
+                >
+                  Login
+                </Button>
               </Link>
-              }
-              {user&&
-<>
-             <Link to="/market" style={{textDecoration:'none',color:'black'}}>
-              <Button
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                Market
-              </Button>   
-              </Link>
-              <Link to="/" style={{textDecoration:'none',color:'black'}}>
-                    <Button
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                Logout
-              </Button></Link>
-</>}
+            )}
+            {user && (
+              <>
+                <Link
+                  to='/market'
+                  style={{ textDecoration: 'none', color: 'black' }}
+                >
+                  <Button
+                    onClick={handleCloseNavMenu}
+                    sx={{ my: 2, color: 'white', display: 'block' }}
+                  >
+                    Market
+                  </Button>
+                </Link>
+                <Link to='/' style={{ textDecoration: 'none', color: 'black' }}>
+                  <Button
+                    onClick={handleCloseNavMenu}
+                    sx={{ my: 2, color: 'white', display: 'block' }}
+                  >
+                    Logout
+                  </Button>
+                </Link>
+              </>
+            )}
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-
-             <Box sx={{ flexGrow: 0 }}>
-                    {user&&
-             <Typography
-         
-                sx={{color:'white',fontWeight:'bold',fontSize:'24px', display: 'block' }}
-              >
-                <span style={{fontWeight:'400',fontSize:'16px'}}>hi</span> {user}
-              </Typography>}
-
-          </Box>
+            <Box sx={{ flexGrow: 0 }}>
+              {user && (
+                <Typography
+                  sx={{
+                    color: 'white',
+                    fontWeight: 'bold',
+                    fontSize: '24px',
+                    display: 'block',
+                  }}
+                >
+                  <span style={{ fontWeight: '400', fontSize: '16px' }}>
+                    hi
+                  </span>{' '}
+                  {user}
+                </Typography>
+              )}
+            </Box>
           </Box>
         </Toolbar>
       </Container>

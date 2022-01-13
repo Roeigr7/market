@@ -7,13 +7,14 @@ const LoginForm = () => {
   const [name, setName] = useState('');
   const [password, setPassword] = useState('');
   const [formSubmitted, setFormSubmitted] = useState('');
-  const { user, setUser } = useContext(userContext);
+  const { setUser } = useContext(userContext);
 
   let navigate = useNavigate();
   const handleSubmit = () => {
     setFormSubmitted(true);
     if (name && password) {
       setUser(name);
+      localStorage.setItem('name', name);
       navigate(`/market`);
     }
   };

@@ -1,5 +1,5 @@
 import './App.css';
-import { Routes, Route,Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import LoginPage from './pages/LoginPage';
 import MarketListPage from './pages/MarketListPage';
 import { BrowserRouter } from 'react-router-dom';
@@ -10,17 +10,19 @@ import { userContext } from './context/userContext';
 import { useState } from 'react';
 
 function App() {
-  const [user, setUser] = useState(false);
+  const [user, setUser] = useState(localStorage.getItem('name') ?? false);
   return (
     <userContext.Provider value={{ user, setUser }}>
       <ThemeProvider theme={theme}>
         <div className='app-container'>
-                <BrowserRouter>
-               <Navbar />
+          <BrowserRouter>
+            <Navbar />
             <Routes>
-      
               <Route path='/' element={<LoginPage />} />
-              <Route path='/market' element={user?<MarketListPage />:<Navigate to="/"/>} />
+              <Route
+                path='/market'
+                element={user ? <MarketListPage /> : <Navigate to='/' />}
+              />
             </Routes>
           </BrowserRouter>
         </div>

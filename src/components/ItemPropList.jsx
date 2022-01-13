@@ -19,7 +19,7 @@ export const objProperties = (obj) => {
       flatObject.push({ key: val, value: obj[val] });
     }
   }
-  console.log('cc', flatObject);
+
   return flatObject.map((property, idx) => (
     <DialogContentText
       sx={{
