@@ -1,0 +1,623 @@
+{
+  "marketSummaryResponse": {
+    "result": [
+      {
+        "exchangeTimezoneName": "America/New_York",
+        "fullExchangeName": "SNP",
+        "symbol": "^GSPC",
+        "regularMarketChange": {
+          "raw": -67.32031,
+          "fmt": "-67.32"
+        },
+        "gmtOffSetMilliseconds": -18000000,
+        "firstTradeDateMilliseconds": -1325583000000,
+        "exchangeDataDelayedBy": 0,
+        "language": "en-US",
+        "regularMarketTime": {
+          "raw": 1642111421,
+          "fmt": "5:03PM EST"
+        },
+        "regularMarketChangePercent": {
+          "raw": -1.4243615,
+          "fmt": "-1.42%"
+        },
+        "exchangeTimezoneShortName": "EST",
+        "quoteType": "INDEX",
+        "regularMarketPrice": {
+          "raw": 4659.03,
+          "fmt": "4,659.03"
+        },
+        "marketState": "POST",
+        "market": "us_market",
+        "quoteSourceName": "Delayed Quote",
+        "priceHint": 2,
+        "tradeable": false,
+        "exchange": "SNP",
+        "sourceInterval": 15,
+        "region": "US",
+        "shortName": "S&P 500",
+        "regularMarketPreviousClose": {
+          "raw": 4726.35,
+          "fmt": "4,726.35"
+        },
+        "triggerable": false
+      },
+      {
+        "exchangeTimezoneName": "America/New_York",
+        "fullExchangeName": "DJI",
+        "symbol": "^DJI",
+        "regularMarketChange": {
+          "raw": -176.69922,
+          "fmt": "-176.70"
+        },
+        "gmtOffSetMilliseconds": -18000000,
+        "firstTradeDateMilliseconds": 694362600000,
+        "exchangeDataDelayedBy": 0,
+        "language": "en-US",
+        "regularMarketTime": {
+          "raw": 1642111421,
+          "fmt": "5:03PM EST"
+        },
+        "regularMarketChangePercent": {
+          "raw": -0.48690453,
+          "fmt": "-0.49%"
+        },
+        "exchangeTimezoneShortName": "EST",
+        "quoteType": "INDEX",
+        "regularMarketPrice": {
+          "raw": 36113.62,
+          "fmt": "36,113.62"
+        },
+        "marketState": "POST",
+        "market": "us_market",
+        "quoteSourceName": "Delayed Quote",
+        "priceHint": 2,
+        "tradeable": false,
+        "exchange": "DJI",
+        "sourceInterval": 120,
+        "region": "US",
+        "shortName": "Dow 30",
+        "regularMarketPreviousClose": {
+          "raw": 36290.32,
+          "fmt": "36,290.32"
+        },
+        "triggerable": false
+      },
+      {
+        "exchangeTimezoneName": "America/New_York",
+        "fullExchangeName": "Nasdaq GIDS",
+        "symbol": "^IXIC",
+        "regularMarketChange": {
+          "raw": -381.58008,
+          "fmt": "-381.58"
+        },
+        "gmtOffSetMilliseconds": -18000000,
+        "firstTradeDateMilliseconds": 34612200000,
+        "exchangeDataDelayedBy": 0,
+        "language": "en-US",
+        "regularMarketTime": {
+          "raw": 1642112159,
+          "fmt": "5:15PM EST"
+        },
+        "regularMarketChangePercent": {
+          "raw": -2.5123138,
+          "fmt": "-2.51%"
+        },
+        "exchangeTimezoneShortName": "EST",
+        "quoteType": "INDEX",
+        "regularMarketPrice": {
+          "raw": 14806.8125,
+          "fmt": "14,806.81"
+        },
+        "marketState": "POST",
+        "market": "us_market",
+        "quoteSourceName": "Delayed Quote",
+        "priceHint": 2,
+        "tradeable": false,
+        "exchange": "NIM",
+        "sourceInterval": 15,
+        "region": "US",
+        "shortName": "Nasdaq",
+        "regularMarketPreviousClose": {
+          "raw": 15188.393,
+          "fmt": "15,188.39"
+        },
+        "triggerable": false
+      },
+      {
+        "exchangeTimezoneName": "America/New_York",
+        "fullExchangeName": "Chicago Options",
+        "symbol": "^RUT",
+        "regularMarketChange": {
+          "raw": -16.620117,
+          "fmt": "-16.62"
+        },
+        "gmtOffSetMilliseconds": -18000000,
+        "firstTradeDateMilliseconds": 558279000000,
+        "exchangeDataDelayedBy": 20,
+        "language": "en-US",
+        "regularMarketTime": {
+          "raw": 1642109408,
+          "fmt": "4:30PM EST"
+        },
+        "regularMarketChangePercent": {
+          "raw": -0.76377213,
+          "fmt": "-0.76%"
+        },
+        "exchangeTimezoneShortName": "EST",
+        "quoteType": "INDEX",
+        "regularMarketPrice": {
+          "raw": 2159.437,
+          "fmt": "2,159.44"
+        },
+        "marketState": "POST",
+        "market": "us_market",
+        "priceHint": 2,
+        "tradeable": false,
+        "exchange": "WCB",
+        "sourceInterval": 15,
+        "region": "US",
+        "shortName": "Russell 2000",
+        "regularMarketPreviousClose": {
+          "raw": 2176.0571,
+          "fmt": "2,176.06"
+        },
+        "triggerable": false
+      },
+      {
+        "fullExchangeName": "NY Mercantile",
+        "symbol": "CL=F",
+        "gmtOffSetMilliseconds": -18000000,
+        "headSymbolAsString": "CL=F",
+        "language": "en-US",
+        "regularMarketTime": {
+          "raw": 1642111199,
+          "fmt": "4:59PM EST"
+        },
+        "regularMarketChangePercent": {
+          "raw": -0.51145375,
+          "fmt": "-0.51%"
+        },
+        "headSymbol": true,
+        "quoteType": "FUTURE",
+        "contractSymbol": false,
+        "tradeable": false,
+        "regularMarketPreviousClose": {
+          "raw": 82.12,
+          "fmt": "82.12"
+        },
+        "exchangeTimezoneName": "America/New_York",
+        "regularMarketChange": {
+          "raw": -0.4200058,
+          "fmt": "-0.42"
+        },
+        "exchangeDataDelayedBy": 30,
+        "firstTradeDateMilliseconds": 967003200000,
+        "exchangeTimezoneShortName": "EST",
+        "regularMarketPrice": {
+          "raw": 81.7,
+          "fmt": "81.70"
+        },
+        "marketState": "REGULAR",
+        "market": "us24_market",
+        "exchange": "NYM",
+        "sourceInterval": 30,
+        "region": "US",
+        "shortName": "Crude Oil",
+        "triggerable": false
+      },
+      {
+        "fullExchangeName": "COMEX",
+        "symbol": "GC=F",
+        "gmtOffSetMilliseconds": -18000000,
+        "headSymbolAsString": "GC=F",
+        "language": "en-US",
+        "regularMarketTime": {
+          "raw": 1642111171,
+          "fmt": "4:59PM EST"
+        },
+        "regularMarketChangePercent": {
+          "raw": -0.28457686,
+          "fmt": "-0.28%"
+        },
+        "headSymbol": true,
+        "quoteType": "FUTURE",
+        "contractSymbol": false,
+        "tradeable": false,
+        "regularMarketPreviousClose": {
+          "raw": 1821.4,
+          "fmt": "1,821.40"
+        },
+        "exchangeTimezoneName": "America/New_York",
+        "regularMarketChange": {
+          "raw": -5.2000732,
+          "fmt": "-5.20"
+        },
+        "exchangeDataDelayedBy": 30,
+        "firstTradeDateMilliseconds": 967608000000,
+        "exchangeTimezoneShortName": "EST",
+        "regularMarketPrice": {
+          "raw": 1822.1,
+          "fmt": "1,822.10"
+        },
+        "marketState": "REGULAR",
+        "market": "us24_market",
+        "exchange": "CMX",
+        "sourceInterval": 15,
+        "region": "US",
+        "shortName": "Gold",
+        "triggerable": false
+      },
+      {
+        "fullExchangeName": "COMEX",
+        "symbol": "SI=F",
+        "gmtOffSetMilliseconds": -18000000,
+        "headSymbolAsString": "SI=F",
+        "language": "en-US",
+        "regularMarketTime": {
+          "raw": 1642111199,
+          "fmt": "4:59PM EST"
+        },
+        "regularMarketChangePercent": {
+          "raw": -0.37488642,
+          "fmt": "-0.37%"
+        },
+        "headSymbol": true,
+        "quoteType": "FUTURE",
+        "contractSymbol": false,
+        "tradeable": false,
+        "regularMarketPreviousClose": {
+          "raw": 23.162,
+          "fmt": "23.16"
+        },
+        "exchangeTimezoneName": "America/New_York",
+        "regularMarketChange": {
+          "raw": -0.08699989,
+          "fmt": "-0.09"
+        },
+        "exchangeDataDelayedBy": 30,
+        "firstTradeDateMilliseconds": 967608000000,
+        "exchangeTimezoneShortName": "EST",
+        "regularMarketPrice": {
+          "raw": 23.12,
+          "fmt": "23.12"
+        },
+        "marketState": "REGULAR",
+        "market": "us24_market",
+        "exchange": "CMX",
+        "sourceInterval": 15,
+        "region": "US",
+        "shortName": "Silver",
+        "triggerable": false
+      },
+      {
+        "fullExchangeName": "CCY",
+        "symbol": "EURUSD=X",
+        "gmtOffSetMilliseconds": 0,
+        "language": "en-US",
+        "regularMarketTime": {
+          "raw": 1642114192,
+          "fmt": "10:49PM GMT"
+        },
+        "regularMarketChangePercent": {
+          "raw": 0.103119865,
+          "fmt": "0.10%"
+        },
+        "quoteType": "CURRENCY",
+        "tradeable": false,
+        "currency": "USD",
+        "regularMarketPreviousClose": {
+          "raw": 1.1445576,
+          "fmt": "1.1446"
+        },
+        "exchangeTimezoneName": "Europe/London",
+        "regularMarketChange": {
+          "raw": 0.0011802912,
+          "fmt": "0.0012"
+        },
+        "exchangeDataDelayedBy": 0,
+        "firstTradeDateMilliseconds": 1070236800000,
+        "exchangeTimezoneShortName": "GMT",
+        "regularMarketPrice": {
+          "raw": 1.1457379,
+          "fmt": "1.1457"
+        },
+        "marketState": "REGULAR",
+        "market": "ccy_market",
+        "quoteSourceName": "Delayed Quote",
+        "priceHint": 4,
+        "exchange": "CCY",
+        "sourceInterval": 15,
+        "shortName": "EUR/USD",
+        "region": "US",
+        "triggerable": false
+      },
+      {
+        "exchangeTimezoneName": "America/New_York",
+        "fullExchangeName": "ICE Futures",
+        "symbol": "^TNX",
+        "regularMarketChange": {
+          "raw": -0.013999939,
+          "fmt": "-0.0140"
+        },
+        "gmtOffSetMilliseconds": -18000000,
+        "firstTradeDateMilliseconds": -252356400000,
+        "exchangeDataDelayedBy": 30,
+        "language": "en-US",
+        "regularMarketTime": {
+          "raw": 1642103991,
+          "fmt": "2:59PM EST"
+        },
+        "regularMarketChangePercent": {
+          "raw": -0.8115906,
+          "fmt": "-0.81%"
+        },
+        "exchangeTimezoneShortName": "EST",
+        "quoteType": "INDEX",
+        "regularMarketPrice": {
+          "raw": 1.7110001,
+          "fmt": "1.7110"
+        },
+        "marketState": "REGULAR",
+        "market": "us24_market",
+        "priceHint": 4,
+        "tradeable": false,
+        "exchange": "NYB",
+        "sourceInterval": 30,
+        "region": "US",
+        "shortName": "10-Yr Bond",
+        "regularMarketPreviousClose": {
+          "raw": 1.725,
+          "fmt": "1.7250"
+        },
+        "triggerable": false,
+        "longName": "Treasury Yield 10 Years"
+      },
+      {
+        "fullExchangeName": "CCY",
+        "symbol": "GBPUSD=X",
+        "gmtOffSetMilliseconds": 0,
+        "language": "en-US",
+        "regularMarketTime": {
+          "raw": 1642114192,
+          "fmt": "10:49PM GMT"
+        },
+        "regularMarketChangePercent": {
+          "raw": 0.050731704,
+          "fmt": "0.05%"
+        },
+        "quoteType": "CURRENCY",
+        "tradeable": false,
+        "currency": "USD",
+        "regularMarketPreviousClose": {
+          "raw": 1.3705577,
+          "fmt": "1.3706"
+        },
+        "exchangeTimezoneName": "Europe/London",
+        "regularMarketChange": {
+          "raw": 0.0006953478,
+          "fmt": "0.0007"
+        },
+        "exchangeDataDelayedBy": 0,
+        "firstTradeDateMilliseconds": 1070236800000,
+        "exchangeTimezoneShortName": "GMT",
+        "regularMarketPrice": {
+          "raw": 1.371253,
+          "fmt": "1.3713"
+        },
+        "marketState": "REGULAR",
+        "market": "ccy_market",
+        "quoteSourceName": "Delayed Quote",
+        "priceHint": 4,
+        "exchange": "CCY",
+        "sourceInterval": 15,
+        "shortName": "GBP/USD",
+        "region": "US",
+        "triggerable": false
+      },
+      {
+        "fullExchangeName": "CCY",
+        "symbol": "JPY=X",
+        "gmtOffSetMilliseconds": 0,
+        "language": "en-US",
+        "regularMarketTime": {
+          "raw": 1642114227,
+          "fmt": "10:50PM GMT"
+        },
+        "regularMarketChangePercent": {
+          "raw": -0.42383975,
+          "fmt": "-0.42%"
+        },
+        "quoteType": "CURRENCY",
+        "tradeable": false,
+        "currency": "JPY",
+        "regularMarketPreviousClose": {
+          "raw": 114.666,
+          "fmt": "114.6660"
+        },
+        "exchangeTimezoneName": "Europe/London",
+        "regularMarketChange": {
+          "raw": -0.48600006,
+          "fmt": "-0.4860"
+        },
+        "exchangeDataDelayedBy": 0,
+        "firstTradeDateMilliseconds": 846633600000,
+        "exchangeTimezoneShortName": "GMT",
+        "regularMarketPrice": {
+          "raw": 114.18,
+          "fmt": "114.1800"
+        },
+        "marketState": "REGULAR",
+        "market": "ccy_market",
+        "quoteSourceName": "Delayed Quote",
+        "priceHint": 4,
+        "exchange": "CCY",
+        "sourceInterval": 15,
+        "shortName": "USD/JPY",
+        "region": "US",
+        "triggerable": false
+      },
+      {
+        "exchangeTimezoneName": "UTC",
+        "fullExchangeName": "CCC",
+        "symbol": "BTC-USD",
+        "regularMarketChange": {
+          "raw": -1249.3047,
+          "fmt": "-1,249.30"
+        },
+        "gmtOffSetMilliseconds": 0,
+        "firstTradeDateMilliseconds": 1410912000000,
+        "exchangeDataDelayedBy": 0,
+        "language": "en-US",
+        "regularMarketTime": {
+          "raw": 1642114080,
+          "fmt": "10:48PM UTC"
+        },
+        "regularMarketChangePercent": {
+          "raw": -2.848568,
+          "fmt": "-2.85%"
+        },
+        "exchangeTimezoneShortName": "UTC",
+        "quoteType": "CRYPTOCURRENCY",
+        "regularMarketPrice": {
+          "raw": 42608.086,
+          "fmt": "42,608.09"
+        },
+        "marketState": "REGULAR",
+        "market": "ccc_market",
+        "quoteSourceName": "CoinMarketCap",
+        "tradeable": false,
+        "exchange": "CCC",
+        "sourceInterval": 15,
+        "region": "US",
+        "regularMarketPreviousClose": {
+          "raw": 43966.87,
+          "fmt": "43,966.87"
+        },
+        "triggerable": false
+      },
+      {
+        "exchangeTimezoneName": "America/New_York",
+        "fullExchangeName": "Nasdaq GIDS",
+        "symbol": "^CMC200",
+        "regularMarketChange": {
+          "raw": -19.917236,
+          "fmt": "-19.92"
+        },
+        "gmtOffSetMilliseconds": -18000000,
+        "firstTradeDateMilliseconds": 1546266600000,
+        "exchangeDataDelayedBy": 0,
+        "language": "en-US",
+        "regularMarketTime": {
+          "raw": 1642110585,
+          "fmt": "4:49PM EST"
+        },
+        "regularMarketChangePercent": {
+          "raw": -1.9085774,
+          "fmt": "-1.91%"
+        },
+        "exchangeTimezoneShortName": "EST",
+        "quoteType": "INDEX",
+        "regularMarketPrice": {
+          "raw": 1023.6472,
+          "fmt": "1,023.65"
+        },
+        "marketState": "POST",
+        "market": "us_market",
+        "quoteSourceName": "Delayed Quote",
+        "priceHint": 2,
+        "tradeable": false,
+        "exchange": "NIM",
+        "sourceInterval": 15,
+        "region": "US",
+        "shortName": "CMC Crypto 200",
+        "regularMarketPreviousClose": {
+          "raw": 1043.5645,
+          "fmt": "1,043.56"
+        },
+        "triggerable": false
+      },
+      {
+        "exchangeTimezoneName": "Europe/London",
+        "fullExchangeName": "FTSE Index",
+        "symbol": "^FTSE",
+        "regularMarketChange": {
+          "raw": 12.129883,
+          "fmt": "12.13"
+        },
+        "gmtOffSetMilliseconds": 0,
+        "firstTradeDateMilliseconds": 441964800000,
+        "exchangeDataDelayedBy": 15,
+        "language": "en-US",
+        "regularMarketTime": {
+          "raw": 1642091730,
+          "fmt": "4:35PM GMT"
+        },
+        "regularMarketChangePercent": {
+          "raw": 0.1606241,
+          "fmt": "0.16%"
+        },
+        "exchangeTimezoneShortName": "GMT",
+        "quoteType": "INDEX",
+        "regularMarketPrice": {
+          "raw": 7563.85,
+          "fmt": "7,563.85"
+        },
+        "marketState": "POSTPOST",
+        "market": "gb_market",
+        "priceHint": 2,
+        "tradeable": false,
+        "exchange": "FGI",
+        "sourceInterval": 15,
+        "region": "US",
+        "shortName": "FTSE 100",
+        "regularMarketPreviousClose": {
+          "raw": 7551.72,
+          "fmt": "7,551.72"
+        },
+        "triggerable": false
+      },
+      {
+        "exchangeTimezoneName": "Asia/Tokyo",
+        "fullExchangeName": "Osaka",
+        "symbol": "^N225",
+        "regularMarketChange": {
+          "raw": -276.5293,
+          "fmt": "-276.53"
+        },
+        "gmtOffSetMilliseconds": 32400000,
+        "firstTradeDateMilliseconds": -157420800000,
+        "exchangeDataDelayedBy": 0,
+        "language": "en-US",
+        "regularMarketTime": {
+          "raw": 1642054502,
+          "fmt": "3:15PM JST"
+        },
+        "regularMarketChangePercent": {
+          "raw": -0.9613174,
+          "fmt": "-0.96%"
+        },
+        "exchangeTimezoneShortName": "JST",
+        "quoteType": "INDEX",
+        "regularMarketPrice": {
+          "raw": 28489.13,
+          "fmt": "28,489.13"
+        },
+        "marketState": "PREPRE",
+        "market": "jp_market",
+        "priceHint": 2,
+        "tradeable": false,
+        "exchange": "OSA",
+        "sourceInterval": 20,
+        "region": "US",
+        "shortName": "Nikkei 225",
+        "regularMarketPreviousClose": {
+          "raw": 28765.66,
+          "fmt": "28,765.66"
+        },
+        "triggerable": false
+      }
+    ],
+    "error": null
+  }
+}
