@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
 import {
   IconButton,
@@ -15,7 +15,7 @@ import { userContext } from '../context/userContext';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [anchorElNav, setAnchorElNav] = useState(null);
   const { user, setUser } = useContext(userContext);
 
   const handleOpenNavMenu = (event) => {
@@ -26,9 +26,9 @@ const Navbar = () => {
     setAnchorElNav(null);
   };
   const handleCloseNavMenuLogout = () => {
-    setAnchorElNav(null);
-    localStorage.removeItem('name', user);
+    localStorage.removeItem('name');
     setUser(false);
+    setAnchorElNav(null);
   };
 
   return (
@@ -55,6 +55,29 @@ const Navbar = () => {
             >
               <MenuIcon />
             </IconButton>
+            <Typography
+              variant='h6'
+              noWrap
+              component='div'
+              sx={{
+                flexGrow: 1,
+                display: {
+                  xs: 'flex',
+                  md: 'none',
+                  alignSelf: 'center',
+                },
+              }}
+            >
+              <div
+                style={{
+                  padding: '1px 7px',
+                  border: '2px solid white',
+                  borderRadius: '50%',
+                }}
+              >
+                AT
+              </div>
+            </Typography>
             <Menu
               id='menu-appbar'
               anchorEl={anchorElNav}
@@ -99,14 +122,7 @@ const Navbar = () => {
               )}
             </Menu>
           </Box>
-          <Typography
-            variant='h6'
-            noWrap
-            component='div'
-            sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
-          >
-            AT
-          </Typography>
+
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {!user && (
               <Link to='/' style={{ textDecoration: 'none', color: 'black' }}>
@@ -133,7 +149,7 @@ const Navbar = () => {
                 </Link>
                 <Link to='/' style={{ textDecoration: 'none', color: 'black' }}>
                   <Button
-                    onClick={handleCloseNavMenu}
+                    onClick={handleCloseNavMenuLogout}
                     sx={{ my: 2, color: 'white', display: 'block' }}
                   >
                     Logout
@@ -145,21 +161,7 @@ const Navbar = () => {
 
           <Box sx={{ flexGrow: 0 }}>
             <Box sx={{ flexGrow: 0 }}>
-              {user && (
-                <Typography
-                  sx={{
-                    color: 'white',
-                    fontWeight: 'bold',
-                    fontSize: '24px',
-                    display: 'block',
-                  }}
-                >
-                  <span style={{ fontWeight: '400', fontSize: '16px' }}>
-                    hi
-                  </span>{' '}
-                  {user}
-                </Typography>
-              )}
+              {user && <p className='max-text'>{user}</p>}
             </Box>
           </Box>
         </Toolbar>

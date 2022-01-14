@@ -45,7 +45,6 @@ const MarketListPage = () => {
     setDialogOpen(false);
     setSelectedItem(false);
   };
-
   if (error) {
     return (
       <Grid container justifyContent='center' pt={5}>
@@ -62,15 +61,24 @@ const MarketListPage = () => {
 
   return (
     <Grid container justifyContent='center'>
-      <Grid pt={3} item>
+      <Grid
+        mt={3}
+        item
+        sx={{
+          justifyContent: 'center',
+          display: 'flex',
+          backgroundColor: '#f9f9f9',
+          width: '100%',
+        }}
+      >
         <Filters checked={checked} setChecked={setChecked} />
       </Grid>
       <Grid
         container
         justifyContent='start'
         alignItems='stretch'
+        py={3}
         spacing={2}
-        py={5}
         px={2}
       >
         {marketList.map((item, idx) => (
