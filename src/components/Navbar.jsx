@@ -27,7 +27,7 @@ const Navbar = () => {
   };
   const handleCloseNavMenuLogout = () => {
     setAnchorElNav(null);
-    localStorage.removeItem('name');
+    localStorage.setItem('name', user);
     setUser(false);
   };
 

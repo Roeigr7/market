@@ -3,31 +3,35 @@ import React, { useEffect, useState } from 'react';
 import { Button, Typography } from '@mui/material';
 import DialogBox from '../components/DialogBox';
 import Filters from '../components/Filters';
+import CircularProgress from '@mui/material/CircularProgress';
 
 const MarketListPage = () => {
   const [marketList, setMarketList] = useState([]);
   const [error, setError] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [dialogOpen, setDialogOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState();
   const [checked, setChecked] = useState(new Array(5).fill(true));
 
   useEffect(() => {
     const fetchMarketList = () => {
+      setIsLoading((prev) => !prev);
       fetch(
-        // 'https://yfapi.net/v6/finance/quote/marketSummary?lang=en&region=US',
-        './demoData.json',
+        'https://yfapi.net/v6/finance/quote/marketSummary?lang=en&region=US',
         {
           headers: {
             'Content-Type': 'application/json',
-            Accept: 'application/json',
+            'X-API-KEY': process.env.REACT_APP_API_KEY,
           },
         }
       )
         .then((response) => response.json())
         .then((data) => {
+          setIsLoading((prev) => !prev);
           setMarketList(data.marketSummaryResponse.result);
         })
         .catch((error) => {
+          setIsLoading((prev) => !prev);
           setError(error.message);
         });
     };
@@ -37,16 +41,22 @@ const MarketListPage = () => {
     setSelectedItem(marketList[idx]);
     setDialogOpen(true);
   };
-
   const handleCloseDialog = () => {
     setDialogOpen(false);
     setSelectedItem(false);
   };
 
-  if (error)
+  if (error) {
     return (
       <Grid container justifyContent='center' pt={5}>
         <Typography variant='h3'>{error}</Typography>
+      </Grid>
+    );
+  }
+  if (isLoading)
+    return (
+      <Grid pt={5} style={{ display: 'flex', justifyContent: 'center' }}>
+        <CircularProgress />
       </Grid>
     );
 
